@@ -1,7 +1,5 @@
 <template>
-  <div class="text-2xl">
-    TODOS
-  </div>
+
 </template>
 
 <script setup lang="ts">
