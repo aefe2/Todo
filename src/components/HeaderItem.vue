@@ -1,5 +1,5 @@
 <template>
-  <div class="text-2xl">
+  <div class="text-3xl text-sky-500">
     TODOS
   </div>
 </template>
