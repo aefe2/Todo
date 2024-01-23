@@ -3,7 +3,7 @@
     <div class="">
       <i class=""></i>
     </div>
-    <span class=""></span>
+    <span class="">{{ todo.text }}</span>
     <button class="">
       <i class=" "></i>
     </button>
