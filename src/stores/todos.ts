@@ -15,12 +15,16 @@ export const useTodoStore = defineStore('todo', {
             this.todos.push(todo)
         },
         removeTodo(id: number) {
-            this.todos = this.todos.filter(todo => todo.id !== id)
+            // this.todos = this.todos.filter((todo) => todo.id !== id);
+            const todoId = this.todos.findIndex((todo) => todo.id === id);
+            this.todos.splice(todoId, 1);
         },
         toggleCompletion(id: number) {
-            this.todos = this.todos.map(todo =>
-                todo.id === id ? {...todo, completed: !todo.completed} : todo
-            );
+            const targetTodo = this.todos.find((todo: Todo) => todo.id === id)
+
+            if (targetTodo) {
+                targetTodo.completed = !targetTodo.completed
+            }
         }
-    }
+    },
 })

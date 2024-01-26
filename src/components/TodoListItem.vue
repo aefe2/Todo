@@ -1,10 +1,13 @@
 <template>
   <div>
     <ul>
-      <li v-for="(todo, index) in todos" :key="index">
-        {{ todo }}
-        <button @click="removeTodo(index)" class="ml-2 text-red-500">Delete</button>
-      </li>
+      <TodoItem
+          v-for="todo in todos"
+          :key="todo.id"
+          :todo="todo"
+          :remove-todo="() => removeTodo(todo.id)"
+          :toggle-completion="() => toggleCompletion(todo.id)"
+      />
     </ul>
   </div>
 </template>
@@ -12,16 +15,20 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 import {useTodoStore} from "@/stores/todos";
+import TodoItem from "@/components/TodoItem.vue";
 
 export default defineComponent({
+  components: {TodoItem},
   setup() {
-    const todoStore = useTodoStore()
+    const todoStore = useTodoStore();
+
     return {
       todos: todoStore.todos,
-      removeTodo: todoStore.removeTodo
-    }
-  }
-})
+      removeTodo: todoStore.removeTodo,
+      toggleCompletion: todoStore.toggleCompletion,
+    };
+  },
+});
 </script>
 
 <style scoped>
