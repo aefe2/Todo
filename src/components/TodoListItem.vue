@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <ul>
+  <div class="bg-neutral-600 p-2 rounded-xl">
+    <ul class="divide-y">
+      <li v-if="todos.length === 0">
+        Пока пусто...
+      </li>
       <TodoItem
+          class="m-2 divide"
           v-for="todo in todos"
           :key="todo.id"
           :todo="todo"
@@ -21,7 +25,6 @@ export default defineComponent({
   components: {TodoItem},
   setup() {
     const todoStore = useTodoStore();
-
     return {
       todos: todoStore.todos,
       removeTodo: todoStore.removeTodo,

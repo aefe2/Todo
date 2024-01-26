@@ -1,8 +1,11 @@
 <template>
-  <li>
+  <li class="grid grid-cols-3">
+    <button @click="toggleCompletion">
+      <span v-if="todo.completed" class="bg-green-500"></span>
+      <span v-if="!todo.completed" class="bg-red-500"></span>
+    </button>
     <span :class="{'line-through' : todo.completed}">{{ todo.text }}</span>
-    <button @click="toggleCompletion">Выполненно</button>
-    <button @click="removeTodo">Удалить</button>
+    <button @click="removeTodo" class="text-red-500">X</button>
   </li>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <input v-model="newTodoText" class="border p-2" placeholder="Enter a new todo"/>
-    <button @click="addTodo" class="bg-green-500 text-white p-2">Add Todo</button>
+  <div class="text-center m-2">
+    <input v-model="newTodoText" class="border rounded-3xl p-3 w-" placeholder="Купить хлеб..."/>
+    <button @click="addTodo" class="-ml-20 text-cyan-400">Добавить</button>
   </div>
 </template>
 
