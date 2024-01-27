@@ -4,7 +4,6 @@
   </header>
 
   <main>
-    <FiltersItem></FiltersItem>
     <TodoListItem></TodoListItem>
     <AddTodoItem></AddTodoItem>
   </main>
@@ -14,7 +13,6 @@
 <script setup lang="ts">
 
 import HeaderItem from "@/components/HeaderItem.vue";
-import FiltersItem from "@/components/FiltersItem.vue";
 import FooterItem from "@/components/FooterItem.vue";
 import TodoListItem from "@/components/TodoListItem.vue";
 import AddTodoItem from "@/components/AddTodoItem.vue";

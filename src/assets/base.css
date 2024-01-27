@@ -59,6 +59,7 @@
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
+  transition-duration: 100ms;
 }
 
 body {

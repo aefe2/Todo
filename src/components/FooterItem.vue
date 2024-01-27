@@ -1,5 +1,5 @@
 <template>
-  <footer class="opacity-50 text-sky-300">2 more to do, 1 done</footer>
+  <footer class="opacity-50 text-center text-sky-300"></footer>
 </template>
 
 <script setup lang="ts">
