@@ -1,6 +1,6 @@
 <template>
   <li class="grid justify-items-center grid-cols-3 ml-3 overflow-hidden">
-    <button @click="toggleCompletion">
+    <button @click="todoStore.toggleCompletion(todo.id)">
       <span v-if="todo.completed" class="text-green-200">
         <img class="h-4" src="@/assets/img/icon-check.png" alt="Выполнено">
       </span>
@@ -8,30 +8,27 @@
         <img class="h-4" src="@/assets/img/icon-unchek.png" alt="Не выполнено">
       </span>
     </button>
-    <span :class="{'line-through' : todo.completed}">{{ todo.text }}</span>
-    <button @click="removeTodo" class="text-red-500">X</button>
+    <span :class="{'line-through' : todo.completed}">{{ props.todo.text }}</span>
+    <button @click="todoStore.removeTodo(todo.id)" class="text-red-500">X</button>
   </li>
 </template>
 
-<script lang="ts">
-import {defineComponent} from "vue";
+<script setup lang="ts">
+import {useTodoStore} from "@/stores/todos";
 
-export default defineComponent({
-  props: {
-    todo: {
-      type: Object,
-      required: true
-    },
-    removeTodo: {
-      type: Function as () => void,
-      required: true
-    },
-    toggleCompletion: {
-      type: Function as () => void,
-      required: true
-    }
-  },
+const todoStore = useTodoStore();
+const props = defineProps({
+  todo: {
+    type: Object,
+    required: true
+  }
 })
+//туду как дата, надо компутед
+//убрать функции из пропс
+//
+//
+//
+//
 </script>
 
 <style scoped>

@@ -1,11 +1,8 @@
 <template>
-  <header>
-    <HeaderItem></HeaderItem>
-  </header>
-
+  <HeaderItem></HeaderItem>
   <main>
-    <TodoListItem></TodoListItem>
     <AddTodoItem></AddTodoItem>
+    <TodoListItem></TodoListItem>
   </main>
   <FooterItem></FooterItem>
 </template>

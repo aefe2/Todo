@@ -15,9 +15,7 @@ export const useTodoStore = defineStore('todo', {
             this.todos.push(todo)
         },
         removeTodo(id: number) {
-            // this.todos = this.todos.filter((todo) => todo.id !== id);
-            const todoId = this.todos.findIndex((todo) => todo.id === id);
-            this.todos.splice(todoId, 1);
+            this.todos = this.todos.filter((todo) => todo.id !== id);
         },
         toggleCompletion(id: number) {
             const targetTodo = this.todos.find((todo: Todo) => todo.id === id)

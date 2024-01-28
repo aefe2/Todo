@@ -1,7 +1,7 @@
 <template>
-  <div class="text-3xl text-sky-500 text-center mb-5">
+  <header class="text-3xl text-sky-500 text-center mb-5">
     TODO
-  </div>
+  </header>
 </template>
 
 <script setup lang="ts">

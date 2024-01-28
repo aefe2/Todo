@@ -2,7 +2,7 @@
   <div class="text-center m-2">
     <div v-if="formVisible">
       <button class="text-cyan-100 mr-5 text-base" @click="closeForm">X</button>
-      <input v-model="newTodoText" class="text-neutral-600 border rounded-l-lg p-3" placeholder="Купить хлеб..."/>
+      <input @keyup.enter="addTodo" v-model="newTodoText" class="text-neutral-600 border rounded-l-lg p-3" placeholder="Купить хлеб..."/>
       <button @click="addTodo" class="bg-cyan-500 hover:bg-cyan-800 hover:text-neutral-300 duration-200 active:border-0 text-neutral-800 rounded-r-lg p-2 h-12">Добавить</button>
     </div>
     <div v-if="!formVisible">
@@ -16,13 +16,13 @@ import {defineComponent, ref} from 'vue';
 import {useTodoStore} from "@/stores/todos";
 
 interface State {
-  formVisible: boolean
+  formVisible: boolean,
 }
 
 export default defineComponent({
   data(): State {
     return {
-      formVisible: true
+      formVisible: true,
     }
   },
   methods: {
@@ -54,7 +54,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped>
-
-</style>
