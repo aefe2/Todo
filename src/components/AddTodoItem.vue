@@ -22,7 +22,7 @@ interface State {
 export default defineComponent({
   data(): State {
     return {
-      formVisible: false
+      formVisible: true
     }
   },
   methods: {
