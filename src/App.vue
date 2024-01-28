@@ -16,6 +16,3 @@ import AddTodoItem from "@/components/AddTodoItem.vue";
 
 </script>
 
-<style scoped>
-
-</style>

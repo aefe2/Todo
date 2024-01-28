@@ -23,14 +23,4 @@ const props = defineProps({
     required: true
   }
 })
-//туду как дата, надо компутед
-//убрать функции из пропс
-//
-//
-//
-//
 </script>
-
-<style scoped>
-
-</style>

@@ -20,7 +20,3 @@ import TodoItem from "@/components/TodoItem.vue";
 
 const todoStore = useTodoStore();
 </script>
-
-<style scoped>
-
-</style>
