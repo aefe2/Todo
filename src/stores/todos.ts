@@ -23,6 +23,9 @@ export const useTodoStore = defineStore('todo', {
             if (targetTodo) {
                 targetTodo.completed = !targetTodo.completed
             }
+        },
+        editTodo({id, text}: { id: number, text: string }) {
+            this.todos = this.todos.map(todo => todo.id === id ? {...todo, text} : todo)
         }
     },
 })

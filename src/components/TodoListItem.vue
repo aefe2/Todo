@@ -5,7 +5,7 @@
         Пока пусто...
       </li>
       <TodoItem
-          class="bg-neutral-700 rounded-lg m-2 flex py-2"
+          class="bg-neutral-100 rounded-lg m-2 flex py-2"
           v-for="todo in todoStore.todos"
           :key="todo.id"
           :todo="todo"
