@@ -7,8 +7,8 @@
       <div>
         <button class="text-sky-700 text-base" @click="closeForm">X</button>
       </div>
-      <input @keyup.enter="addTodo" ref="input" v-model="newTodoText" class="text-neutral-600 border rounded-lg p-2 mb-2 w-2/4" placeholder="Купить хлеб..."/>
-      <button @click="addTodo(); this.$refs.input.focus()" class="bg-sky-500 hover:bg-sky-700 text-white rounded-lg p-1 w-1/4 h-4/5">Добавить</button>
+      <input @keyup.enter="addTodo" ref="input" v-model="newTodoText" class="text-neutral-600 border rounded-lg p-2 mb-2 " placeholder="Купить хлеб..."/>
+      <button @click="addTodo(); this.$refs.input.focus()" class="bg-sky-500 hover:bg-sky-700 text-white rounded-lg px-2 h-3/4">Добавить</button>
     </div>
   </div>
 </template>
